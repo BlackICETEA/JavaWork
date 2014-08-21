@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>用户列表</title>
+</head>
+<body>
+<h1>
+用户列表 
+$!uuid
+</h1>
+<b><a href="users/add">添加</a></b>----
+<table>
+<tr><td>编号</td><td>用户名</td><td>密码</td><td>角色</td><td>操作</td><td>操作</td></tr>
+#foreach( $user in $users )
+    <tr>
+    <td>$user.id</td>
+    <td>$user.name</td>
+    <td>$user.pwd</td>
+	<td>$user.role</td>
+	<td><a href="users/update/?id=$user.id">修改</a></td>
+	<td><a href="users/delete/?id=$user.id">删除</a></td>
+	</tr>
+#end
+</table>
+</body>
+</html>

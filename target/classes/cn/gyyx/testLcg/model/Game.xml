@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gyyx.testLcg.model.Game">
+	<!-- 根据游戏code获得游戏名称 -->
+	<select id="select" resultType="String" parameterType="String">
+		select * from lichengong_game_tb where code=#{code}
+	<!-- 获得所有列表 -->
+	</select>
+	<select id="selectAll" resultType="Game">
+		select * from lichengong_game_tb
+	</select>
+	
+	<!-- 插入一条记录 -->
+	<insert id="add" parameterType="Game">
+		insert into lichengong_game_tb (name)
+		value(#name})
+	</insert>
+	
+	<!-- 更新一条记录 -->
+	<update id="update" parameterType="Game">
+		update lichengong_game_tb set name=#{name} where code=#{code}
+	</update>
+	
+	<!-- 删除一条记录 -->
+    <delete id="delete" parameterType="int">
+		delete from lichengong_game_tb where code=#{code}
+	</delete>
+</mapper> 

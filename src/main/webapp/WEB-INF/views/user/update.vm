@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>修改用户</title>
+</head>
+<body>
+<h1>
+修改用户  id=$id
+</h1>
+<form method="post" />
+<input type="hidden" name="id" value="$id"/>
+用户名:<input type="text" name="name"/>
+密码:<input type="text" name="pwd"/>
+角色:<input type="text" name="role"/>
+<input type="submit" name="submit" value="提交"/>
+</form>
+
+</body>
+</html>

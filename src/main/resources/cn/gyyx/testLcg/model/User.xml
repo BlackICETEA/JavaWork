@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gyyx.testLcg.model.User">
+	<select id="select" resultType="cn.gyyx.testLcg.model.User" parameterType="String">
+		select * from lichengong_user_tb where name=#{name}
+	</select>
+	<select id="selectAll" resultType="cn.gyyx.testLcg.model.User">
+		select * from lichengong_user_tb
+	</select>
+	<insert id="add" parameterType="cn.gyyx.testLcg.model.User">
+		insert into lichengong_user_tb (role,name,pwd)
+		value(#{role},#{name},#{pwd})
+	</insert>
+	<update id="update" parameterType="cn.gyyx.testLcg.model.User">
+		update lichengong_user_tb set role=#{role},name=#{name},pwd=#{pwd} where id=#{id}
+	</update>
+    <delete id="delete" parameterType="int">
+		delete from lichengong_user_tb where id=#{id}
+	</delete>
+</mapper> 

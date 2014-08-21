@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>出错了</title>
+</head>
+<body>
+<h1>
+$exception.message
+</h1>
+</body>
+</html>
+

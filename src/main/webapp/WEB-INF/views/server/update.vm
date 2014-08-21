@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>修改用户</title>
+</head>
+<body>
+<h1>
+修改用户  code=$code
+</h1>
+<form method="post" />
+<input type="hidden" name="code" value="$code"/>
+游戏ID:<input type="text" name="game_id"/>
+游戏区服:<input type="text" name="server_name"/>
+<input type="submit" name="submit" value="提交"/>
+</form>
+
+</body>
+</html>

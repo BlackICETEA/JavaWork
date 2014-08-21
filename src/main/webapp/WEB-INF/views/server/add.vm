@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>添加游戏列表</title>
+</head>
+<body>
+<h1>
+添加游戏列表
+</h1>
+<form method="post" />
+游戏ID:<input type="text" name="game_id" value="$game_id"/>
+游戏区服:<input type="text" name="server_name"/>
+<input type="submit" name="submit" value="提交"/>
+</form>
+
+</body>
+</html>

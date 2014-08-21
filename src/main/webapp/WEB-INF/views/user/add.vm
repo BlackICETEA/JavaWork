@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>添加用户</title>
+</head>
+<body>
+<h1>
+添加用户
+</h1>
+<form method="post" />
+用户名:<input type="text" name="name"/>
+密码:<input type="text" name="pwd"/>
+角色:<input type="text" name="role"/>
+<input type="submit" name="submit" value="提交"/>
+</form>
+
+</body>
+</html>

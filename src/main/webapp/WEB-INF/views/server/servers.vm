@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>游戏列表</title>
+</head>
+<body>
+<h1>游戏列表$!uuid</h1>
+<p>游戏名称<select>
+	#foreach($game in $games)
+		<option value="$game.code">$game.name</option>
+	#end
+	
+</select>
+<b><a href="servers/add">添加</a></b>
+</p>
+
+<table>
+<tr><td>编号</td><td>game_id</td><td>server_name</td><td>操作</td><td>操作</td></tr>
+#foreach( $server in $servers )
+    <tr>
+    <td>$server.id</td>
+    <td>$server.game_id</td>
+	<td>$server.server_name</td>
+	<td><a href="servers/update/?id=$server.id">修改</a></td>
+	<td><a href="servers/delete/?id=$server.id">删除</a></td>
+	</tr>
+#end
+</table>
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+//$(function() {
+//	jQuery.ajax({
+//		url : 'index.json',
+//		contentType : "application/json",//application/xml
+//		processData : true,//contentType为xml时，些值为false
+//		dataType : "json",//json--返回json数据类型；xml--返回xml
+//		data : {
+//			tag : 'tag123'
+//		},
+//		success : function(data) {
+//			alert(data.applyList.length);
+//		},
+//		error : function(e) {
+//			alert('error');
+//		}
+	//});
+//});
+</script>

@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>用户登陆</title>
+</head>
+<body>
+<h1>
+用户登陆
+</h1>
+<form method="post" action="login" />
+用户名:<input type="text" name="name"/>
+密码:<input type="text" name="pwd"/>
+<input type="submit" name="submit" value="提交"/>
+</form>
+
+</body>
+</html>

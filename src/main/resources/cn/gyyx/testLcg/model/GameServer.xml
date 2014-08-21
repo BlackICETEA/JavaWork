@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gyyx.testLcg.model.GameServer">
+	<select id="selectForCode" resultType="cn.gyyx.testLcg.model.GameServer" parameterType="int">
+		select * from lichengong_game_server_tb where code=#{code}
+	</select>
+	<select id="selectForGameId" resultType="cn.gyyx.testLcg.model.GameServer" parameterType="String">
+		select * from lichengong_game_server_tb where game_id=#{game_id}
+	</select>
+	<select id="selectAll" resultType="cn.gyyx.testLcg.model.GameServer">
+		select * from lichengong_game_server_tb
+	</select>
+	<insert id="add" parameterType="cn.gyyx.testLcg.model.GameServer">
+		insert into lichengong_game_server_tb (game_id,game_server)
+		value(#{game_id},#{game_server})
+	</insert>
+	<update id="update" parameterType="cn.gyyx.testLcg.model.GameServer">
+		update lichengong_game_server_tb set #{game_id},#{game_server} where code=#{code}
+	</update>
+    <delete id="delete" parameterType="int">
+		delete from lichengong_game_server_tb where code=#{code}
+	</delete>
+</mapper> 
